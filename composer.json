@@ -1,0 +1,13 @@
+{
+	"name": "myvendor/myapp",
+	"require": {
+		"php": ">=5.3.2",
+		"yiisoft/yii": "1.1.*",
+		"yiiext/migrate-command": "0.8.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"config": "./"
+		}
+	}
+}
