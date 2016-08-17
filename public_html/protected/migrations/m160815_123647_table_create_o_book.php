@@ -17,7 +17,7 @@ class m160815_123647_table_create_o_book extends CDbMigration
 
 	public function down()
 	{
-		dropTable('el_slider');
+		dropTable('o_book');
 		return false;
 	}
 }

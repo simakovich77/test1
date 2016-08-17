@@ -10,6 +10,13 @@
  */
 class Page extends CActiveRecord
 {
+
+	//proveryat kajd svoistvo ne nado
+	public function primaryKey()
+	{
+		return 'id';
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -17,6 +24,8 @@ class Page extends CActiveRecord
 	{
 		return 'o_page';
 	}
+
+
 
 	/**
 	 * @return array validation rules for model attributes.
