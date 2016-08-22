@@ -2,34 +2,16 @@
 
 class BookController extends Controller
 {
-    public function actionIndex()
+
+    public function actionIndex($id)
     {
-        $array = array(2,3);
-       $num = 'dfgdfgdfgfdg';
+       // $id=$_GET['id'];
 
-        $a = Book::model()->deleteAll('title = :title', array (':title' => $num));
-        if($a)
-        {
-            echo 'Есть!';}
-            else
+        $model = Book::model()->findByPk($id);
 
-            {
-                echo 'Нееет';
-            }
+       $this->render('index', array('model' => $model), true);
+       
 
-        $this->render('index');
-        //echo $a;
-        /*
-        //$a = 1234;
-        //var_dump($a);
-     foreach ($a as $one) {
-        echo $one->title;
-            echo '<hr />';
-
-       }*/
-        //echo $a->title;
-
-            }
-
+    }
 }
 
