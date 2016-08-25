@@ -30,6 +30,7 @@ return array(
 
 	),
 
+
 	// application components
 	'components'=>array(
 
@@ -83,3 +84,5 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 	),
 );
+
+
