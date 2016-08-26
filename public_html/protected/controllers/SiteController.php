@@ -29,7 +29,18 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+
+		$data = [
+			'pressCoverage' => [
+				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 1',
+				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
+				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
+			]
+		];
+
+		//TODO: тут данные по другим блокам занести в массив $data
+
+		$this->render('index', $data);
 	}
 
 	/**
