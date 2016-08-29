@@ -1,5 +1,10 @@
 <?php
 
+
+
+
+
+
 class SiteController extends Controller
 {
 	/**
@@ -35,12 +40,22 @@ class SiteController extends Controller
 				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 1',
 				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
 				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
-			]
+			],
+
+			'clients1' => [
+					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 1',
+					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
+					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
+				]
 		];
 
 		//TODO: тут данные по другим блокам занести в массив $data
 
 		$this->render('index', $data);
+		$a = clients::model()->findByPk(1);
+
+		echo $a->title;
+		echo 111;
 	}
 
 	/**

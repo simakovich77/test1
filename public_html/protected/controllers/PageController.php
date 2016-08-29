@@ -125,7 +125,13 @@ class PageController extends Controller
 		$dataProvider=new CActiveDataProvider('Page');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+
 		));
+
+		$a = clients::model()->findByPk(1);
+
+		echo $a->title;
+		echo 111;
 	}
 
 	/**
@@ -170,4 +176,5 @@ class PageController extends Controller
 			Yii::app()->end();
 		}
 	}
+
 }

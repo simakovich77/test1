@@ -191,12 +191,34 @@
 </div>
 <!-- End Pricing Table -->
 
+
+<!--
+<div class="container">
+    <div class="row">
+        <?php //foreach ($pressCoverage as $coverage) : ?>
+            <div class="col-md-4 col-sm-6">
+                <div class="in-press press-wired">
+                    <a href="#"><?php //echo $coverage; ?></a>
+                </div>
+            </div>
+        <?php //endforeach; ?>
+    </div>
+</div>
+-->
+
 <!-- Our Clients -->
 <div class="section">
 	<div class="container">
 		<h2>Our Clients</h2>
 		<div class="clients-logo-wrapper text-center row">
-			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/canon.png" alt="Client Name"></a></div>
+
+            <?php foreach ($clients1 as $clients11) : ?>
+            <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
+                <a href="#"><?php echo $clients11; ?></a>
+            </div>
+
+            <!--
+            <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/canon.png" alt="Client Name"></a></div>
 			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/cisco.png" alt="Client Name"></a></div>
 			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/dell.png" alt="Client Name"></a></div>
 			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/ea.png" alt="Client Name"></a></div>
@@ -207,8 +229,10 @@
 			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/microsoft.png" alt="Client Name"></a></div>
 			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/mysql.png" alt="Client Name"></a></div>
 			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/sony.png" alt="Client Name"></a></div>
-			<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/yahoo.png" alt="Client Name"></a></div>
-		</div>
+            <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/yahoo.png" alt="Client Name"></a></div>
+		-->
+            <?php endforeach; ?>
+        </div>
 	</div>
 </div>
 <!-- End Our Clients -->
