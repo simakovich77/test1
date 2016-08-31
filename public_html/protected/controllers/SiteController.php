@@ -50,12 +50,16 @@ class SiteController extends Controller
 		];
 
 		//TODO: тут данные по другим блокам занести в массив $data
-
+		$array = array(2,3);
+		$num = 3;
 		$this->render('index', $data);
-		$a = clients::model()->findByPk(1);
-
-		echo $a->title;
-		echo 111;
+		$a = clients::model()->findAll('id<:num',array(':num'=>$num));
+		foreach ($a as $one)
+		{
+			echo $one->title;
+		}
+		//echo $a->title;
+		//echo 111;
 	}
 
 	/**

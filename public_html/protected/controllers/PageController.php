@@ -128,10 +128,10 @@ class PageController extends Controller
 
 		));
 
-		$a = clients::model()->findByPk(1);
+		$a = clients::model();
 
-		echo $a->title;
-		echo 111;
+		//echo $a->title;
+		//echo 111;
 	}
 
 	/**
