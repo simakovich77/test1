@@ -3,14 +3,15 @@
 class BookController extends Controller
 {
 
-    public function actionIndex($id)
+    public function actionIndex()
     {
        // $id=$_GET['id'];
 
-        $model = Book::model()->findByPk($id);
-
-       $this->render('index', array('model' => $model), true);
-       
+        $a = Book::model()->findByPk(2);
+       // $model->title = 'dfgdfgdfgdfgdfgdfgdfgdf';
+       // $model->author = 'Vano';
+       echo $a->title;
+       // $model->save(false);
 
     }
 }
