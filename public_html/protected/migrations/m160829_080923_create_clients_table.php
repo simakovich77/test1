@@ -7,7 +7,8 @@ class m160829_080923_create_clients_table extends CDbMigration
         $this->createTable('o_cient', array(
             'id' => 'int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY',
             'title' => 'VARCHAR(255)',
-            'img'=>'VARCHAR(255)'
+            'img'=>'VARCHAR(255)',
+            'article'=>' LONGTEXT',
         ) , 'ENGINE=InnoDB CHARSET=utf8');
     }
 

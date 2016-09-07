@@ -212,14 +212,12 @@
 		<h2>Our Clients</h2>
 		<div class="clients-logo-wrapper text-center row">
 
-            <?php foreach ($imgClients as $clients11) : ?>
+            <?php foreach ($p_client as $client) : ?>
             <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
                 <!--<a href="#"><?php //echo $clients11->title; ?></a>
                 -->
-				<?php echo CHtml::image($clients11->img);
-				
+				<a href="/index.php/client/index?name=<?php echo $client->title?>"><?php echo CHtml::image($client->img);?></a>
 
-				?>
             </div>
 
             <!--

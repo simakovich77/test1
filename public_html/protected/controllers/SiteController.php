@@ -35,8 +35,8 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 
-		$imgClients = Clients::model()->findAll();
-		shuffle($imgClients);
+		$pClient = Clients::model()->findAll();
+		shuffle($pClient);
 
 		$data = [
 			'pressCoverage' => [
@@ -50,7 +50,7 @@ class SiteController extends Controller
 					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
 					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
 				],
-			'imgClients' => $imgClients,
+			'p_client' => $pClient,
 		];
 
 		//TODO: тут данные по другим блокам занести в массив $data
