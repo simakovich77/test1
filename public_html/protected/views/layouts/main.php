@@ -37,11 +37,11 @@
 					<li class="shopping-cart-items"><i class="glyphicon glyphicon-shopping-cart icon-white"></i> <a href="page-shopping-cart.html"><b>3 items</b></a></li>
 					<li>
 						<div class="dropdown choose-country">
-							<a class="#" data-toggle="dropdown" href="#"><img src="img/flags/gb.png" alt="Great Britain"> UK</a>
+							<a class="#" data-toggle="dropdown" href="#"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/flags/gb.png" alt="Great Britain"> UK</a>
 							<ul class="dropdown-menu" role="menu">
-								<li role="menuitem"><a href="#"><img src="img/flags/us.png" alt="United States"> US</a></li>
-								<li role="menuitem"><a href="#"><img src="img/flags/de.png" alt="Germany"> DE</a></li>
-								<li role="menuitem"><a href="#"><img src="img/flags/es.png" alt="Spain"> ES</a></li>
+								<li role="menuitem"><a href="#"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/flags/us.png" alt="United States"> US</a></li>
+								<li role="menuitem"><a href="#"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/flags/de.png" alt="Germany"> DE</a></li>
+								<li role="menuitem"><a href="#"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/flags/es.png" alt="Spain"> ES</a></li>
 							</ul>
 						</div>
 					</li>
@@ -51,7 +51,7 @@
 		</div>
 		<nav id="mainmenu" class="mainmenu">
 			<ul>
-				<li class="logo-wrapper"><a href="index.html"><img src="img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+				<li class="logo-wrapper"><a href="index.html"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
 				<li class="active">
 					<a href="index.html">Home</a>
 				</li>
@@ -146,7 +146,7 @@
 				<!-- Slide Text -->
 				<h3 class="subtitle">It looks great on desktops, laptops, tablets and smartphones</h3>
 				<!-- Slide Image -->
-				<img class="slide-img" src="img/homepage-slider/slide1.png" alt="Slide 1" />
+				<img class="slide-img" src=<?php echo Yii::app()->request->baseUrl; ?>"/img/homepage-slider/slide1.png" alt="Slide 1" />
 			</li>
 			<!-- End Slide 1 -->
 			<!-- Slide 2 -->
@@ -156,7 +156,7 @@
 				<!-- Slide Text -->
 				<h3 class="subtitle">Comes with 5 color schemes and it's easy to make your own!</h3>
 				<!-- Slide Image -->
-				<img class="slide-img" src="img/homepage-slider/slide2.png" alt="Slide 2" />
+				<img class="slide-img" src=<?php echo Yii::app()->request->baseUrl; ?>"/img/homepage-slider/slide2.png" alt="Slide 2" />
 			</li>
 			<!-- End Slide 2 -->
 			<!-- Slide 3 -->
@@ -166,7 +166,7 @@
 				<!-- Slide Text -->
 				<h3 class="subtitle">Huge amount of components and over 30 sample pages!</h3>
 				<!-- Slide Image -->
-				<img class="slide-img" src="img/homepage-slider/slide3.png" alt="Slide 3" />
+				<img class="slide-img" src=<?php echo Yii::app()->request->baseUrl; ?>"/img/homepage-slider/slide3.png" alt="Slide 3" />
 			</li>
 			<!-- End Slide 3 -->
 		</ul>
@@ -191,7 +191,7 @@
 				<h3>Our Latest Work</h3>
 				<div class="portfolio-item">
 					<div class="portfolio-image">
-						<a href="page-portfolio-item.html"><img src="img/portfolio6.jpg" alt="Project Name"></a>
+						<a href="page-portfolio-item.html"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/portfolio6.jpg" alt="Project Name"></a>
 					</div>
 				</div>
 			</div>
