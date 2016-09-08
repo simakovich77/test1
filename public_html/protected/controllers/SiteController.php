@@ -35,7 +35,8 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 
-		$pClient = Clients::model()->findAll();
+		$pClient = Clients::model()->findAllBySql('SELECT * FROM o_cient LIMIT 12');
+
 		shuffle($pClient);
 
 		$data = [

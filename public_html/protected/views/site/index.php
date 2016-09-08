@@ -214,7 +214,7 @@
 
             <?php foreach ($p_client as $index => $client) : ?>
 				<?php
-				if($index < 12) {
+
 
 					?>
 					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
@@ -240,7 +240,7 @@
                     <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/yahoo.png" alt="Client Name"></a></div>
                 -->
 					<?php
-				}
+
 			endforeach; ?>
 			<a href="">Показать остальных клиентов</a>
         </div>

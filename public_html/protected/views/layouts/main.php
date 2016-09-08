@@ -183,6 +183,8 @@
 
 <?php echo $content; ?>
 
+
+
 <!-- Footer -->
 <div class="footer">
 	<div class="container">
