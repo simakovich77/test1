@@ -216,7 +216,7 @@
             <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
                 <!--<a href="#"><?php //echo $clients11->title; ?></a>
                 -->
-				<a href="/index.php/client/index?name=<?php echo $client->title?>"><?php echo CHtml::image($client->img);?></a>
+				<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/client/index?name=<?php echo $client->title?>"><?php echo CHtml::image($client->img);?></a>
 
             </div>
 
@@ -235,6 +235,7 @@
             <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/yahoo.png" alt="Client Name"></a></div>
 		-->
             <?php endforeach; ?>
+			<a href="">Показать остальных клиентов</a>
         </div>
 	</div>
 </div>
