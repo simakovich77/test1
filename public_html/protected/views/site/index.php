@@ -212,9 +212,9 @@
 		<h2>Our Clients</h2>
 		<div class="clients-logo-wrapper text-center row">
 
-            <?php foreach ($p_client as $client) : ?>
+            <?php foreach ($p_client as $index => $client) : ?>
 				<?php
-				if($client->id<=13) {
+				if($index < 12) {
 
 					?>
 					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
