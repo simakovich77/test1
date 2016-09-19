@@ -3,6 +3,7 @@
 <div class="section">
 	<div class="container">
 		<div class="row">
+
 			<?php foreach ($pressCoverage as $coverage) : ?>
 				<div class="col-md-4 col-sm-6">
 					<div class="in-press press-wired">
@@ -10,6 +11,7 @@
 					</div>
 				</div>
 			<?php endforeach; ?>
+
 		</div>
 	</div>
 </div>
@@ -192,19 +194,28 @@
 <!-- End Pricing Table -->
 
 
-<!--
+
 <div class="container">
     <div class="row">
         <?php //foreach ($pressCoverage as $coverage) : ?>
             <div class="col-md-4 col-sm-6">
                 <div class="in-press press-wired">
-                    <a href="#"><?php //echo $coverage; ?></a>
+					<?php
+					$this->widget('zii.widgets.CListView', array(
+						'dataProvider'=>$dataProvider,
+						'itemView'=>'_view',
+					));
+
+					?>
+                    
+
+					
                 </div>
             </div>
         <?php //endforeach; ?>
     </div>
 </div>
--->
+
 
 <!-- Our Clients -->
 <div class="section">
@@ -212,16 +223,14 @@
 		<h2>Our Clients</h2>
 		<div class="clients-logo-wrapper text-center row">
 
-            <?php foreach ($p_client as $index => $client) : ?>
+            <?php //foreach ($p_client as $index => $client) : ?>
 				<?php
 
 
 					?>
 					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
-						<!--<a href="#"><?php //echo $clients11->title;
-						?></a>
-                -->
-						<a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/client/index?name=<?php echo $client->title ?>"><?php echo CHtml::image($client->img); ?></a>
+
+
 
 					</div>
 
@@ -241,7 +250,7 @@
                 -->
 					<?php
 
-			endforeach; ?>
+			//endforeach; ?>
 			<a href="">Показать остальных клиентов</a>
         </div>
 	</div>

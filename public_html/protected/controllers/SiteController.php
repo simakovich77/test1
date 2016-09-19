@@ -32,32 +32,66 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'id > 5';
+		$criteria->order = 'title ASC';
+		$dataProvider = new CActiveDataProvider('Clients',
+			array(
+				'criteria' =>$criteria,
+				'pagination' => array(
+					'pagesize'=> 1,
+				)
+
+			)
+			);
+		
+		//$this->render('index', array(
+		//	'dataProvider' => $dataProvider,
+		//));
+
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 
-		$pClient = Clients::model()->findAllBySql('SELECT * FROM o_cient LIMIT 12');
+		//$pClient = Clients::model()->findAllBySql();
+
+		/*
+		$pClient = Clients::model()->findAll(['limit' => 5]);
 
 		shuffle($pClient);
-
+*/
 		$data = [
 			'pressCoverage' => [
 				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 1',
 				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
 				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
 			],
-
 			'clients1' => [
-					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 1',
-					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
-					'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
-				],
-			'p_client' => $pClient,
+				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 1',
+				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
+				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
+			],
+				'dataProvider' => $dataProvider,
+			
+
 		];
 
+		$this->render('index', $data);
+
+/*
+		'clients1' => [
+		'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 1',
+		'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 2',
+		'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
+	],
+			'p_client' => $pClient,
+
+*/
 		//TODO: тут данные по другим блокам занести в массив $data
 		//$array = array(2,3);
 		//$num = 3;
-		$this->render('index', $data);
+
+
+
 	//	$a = clients::model()->findAll('id<:num',array(':num'=>$num));
 	//	foreach ($a as $one)
 	//	{
