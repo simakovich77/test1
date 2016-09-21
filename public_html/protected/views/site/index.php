@@ -197,22 +197,13 @@
 
 <div class="container">
     <div class="row">
-        <?php //foreach ($pressCoverage as $coverage) : ?>
+        <?php foreach ($pressCoverage as $coverage) : ?>
             <div class="col-md-4 col-sm-6">
                 <div class="in-press press-wired">
-					<?php
-					$this->widget('zii.widgets.CListView', array(
-						'dataProvider'=>$dataProvider,
-						'itemView'=>'_view',
-					));
-
-					?>
-                    
-
-					
+					<?php echo $coverage; ?>
                 </div>
             </div>
-        <?php //endforeach; ?>
+        <?php endforeach; ?>
     </div>
 </div>
 
@@ -222,36 +213,15 @@
 	<div class="container">
 		<h2>Our Clients</h2>
 		<div class="clients-logo-wrapper text-center row">
-
-            <?php //foreach ($p_client as $index => $client) : ?>
-				<?php
-
-
-					?>
-					<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
-
-
-
-					</div>
-
-					<!--
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/canon.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/cisco.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/dell.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/ea.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/ebay.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/facebook.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/google.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/hp.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/microsoft.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/mysql.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/sony.png" alt="Client Name"></a></div>
-                    <div class="col-lg-1 col-md-1 col-sm-3 col-xs-6"><a href="#"><img src="img/logos/yahoo.png" alt="Client Name"></a></div>
-                -->
-					<?php
-
-			//endforeach; ?>
-			<a href="">Показать остальных клиентов</a>
+            <?php foreach ($p_client as $index => $client) : ?>
+				<div class="col-lg-1 col-md-1 col-sm-3 col-xs-6">
+					<?php echo CHtml::link(
+						CHtml::image($client->img, $client->title),
+						$this->createUrl('client/view', ['id' => $client->id])
+					); ?>
+				</div>
+			<?php endforeach; ?>
+			<a href="<?php echo $this->createUrl('client/index'); ?>">Показать остальных клиентов</a>
         </div>
 	</div>
 </div>

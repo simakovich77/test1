@@ -43,7 +43,10 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'showScriptName' => false,
+			'caseSensitive'=>false,
 			'rules'=>array(
+				'clients' => 'client/index',
+				'client/<id:\d+>' => 'client/view',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',

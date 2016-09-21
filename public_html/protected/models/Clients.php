@@ -40,6 +40,23 @@ class Clients extends CActiveRecord
         );
     }
 
+    public function getClientsProvider()
+    {
+        $criteria = new CDbCriteria;
+        $criteria->order = 'title ASC';
+        $dataProvider = new CActiveDataProvider('Clients',
+            array(
+                'criteria' =>$criteria,
+                'pagination' => array(
+                    'pageSize'=> 5,
+                )
+
+            )
+        );
+
+        return $dataProvider;
+    }
+
 
     public function search()
     {

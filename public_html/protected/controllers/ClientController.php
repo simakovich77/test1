@@ -10,29 +10,18 @@ class ClientController extends Controller
  */
     public function actionIndex()
     {
-        $namec = Yii::app()->getRequest()->getParam('name', null);
-        echo $namec;
+        $dataProvider = Clients::model()->getClientsProvider();
 
-        $nameclientsp = Clients::model()->find('title=:title', array(':title'=>$namec));
-        //shuffle($nameclientsp);
-        //echo $nameclientsp;
-        $datac = [
-            'nameclient_acin' => $nameclientsp,
-
-        ];
-        $this->render('index',$datac);
-
+        $data = ['dataProvider' => $dataProvider];
+        $this->render('index', $data);
     }
 
 
     public function actionView($id)
     {
-       
-        $dataclient = [
-            'idclient' => $id,
+        $client = Clients::model()->findByPk($id);
 
-            ];
-        $this->render('view',$dataclient);
+        $this->render('view', ['client' => $client]);
     }
    
 }
