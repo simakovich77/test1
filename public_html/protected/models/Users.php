@@ -1,6 +1,6 @@
 <?php
 
-class Clients extends CActiveRecord
+class Users extends CActiveRecord
 {
 
     public function tableName()

@@ -1,10 +1,5 @@
 <?php
 
-
-
-
-
-
 class SiteController extends Controller
 {
 	/**
@@ -34,6 +29,8 @@ class SiteController extends Controller
 	{
 		$pClient = Clients::model()->findAll(['limit' => 12]);
 		shuffle($pClient);
+		$pUser = Users::model()->findAll(['limit' => 3]);
+		shuffle($pUser);
 
 		$data = [
 			'pressCoverage' => [
@@ -47,6 +44,7 @@ class SiteController extends Controller
 				'Morbi eleifend congue elit nec sagittis. Praesent aliquam lobortis tellus, nec consequat vitae 3',
 			],
 				'p_client' => $pClient,
+			'p_user' => $pUser,
 			
 
 		];
