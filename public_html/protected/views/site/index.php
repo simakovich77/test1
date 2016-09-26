@@ -69,27 +69,30 @@
 	<div class="container">
 		<h2>Testimonials</h2>
 		<div class="row">
+			<?php foreach ($p_user as $index => $user) : ?>
 			<!-- Testimonial -->
 			<div class="testimonial col-md-4 col-sm-6">
 				<!-- Author Photo -->
-				<div class="author-photo">
-					<img src="img/user1.jpg" alt="Author 1">
-				</div>
+
 				<div class="testimonial-bubble">
+
+
 					<blockquote>
-						<!-- Quote -->
-						<p class="quote">
-							"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut."
-						</p>
-						<!-- Author Info -->
-						<cite class="author-info">
-							- Name Surname,<br>Managing Director at <a href="#">Some Company</a>
-						</cite>
+
+						<?php
+						echo CHtml::image($user->img);
+
+							echo($user->director);
+							echo( $user->name);
+
+						 ?>
 					
 					</blockquote>
+
 					<div class="sprite arrow-speech-bubble"></div>
 				</div>
 			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div>
