@@ -22,7 +22,9 @@
            <a href="#"><i class="icon-tumblr"></i></a>
           </span>
             </li>
-            <li>Web Developer</li>
+            <li><?php
+
+                echo $data->company; ?></li>
         </ul>
     </div>
 </div>
