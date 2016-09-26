@@ -23,7 +23,22 @@ class Users extends CActiveRecord
         );
     }
 
+    public function getUserProvider()
+    {
+        $criteria = new CDbCriteria;
+        $criteria->order = 'name ASC';
+        $dataProvider = new CActiveDataProvider('Users',
+            array(
+                'criteria' =>$criteria,
+                'pagination' => array(
+                    'pageSize'=> 5,
+                )
 
+            )
+        );
+
+        return $dataProvider;
+    }
 
     public function relations()
     {
@@ -47,24 +62,6 @@ class Users extends CActiveRecord
 
         );
     }
-
-    public function getClientsProvider()
-    {
-        $criteria = new CDbCriteria;
-        $criteria->order = 'title ASC';
-        $dataProvider = new CActiveDataProvider('Users',
-            array(
-                'criteria' =>$criteria,
-                'pagination' => array(
-                    'pageSize'=> 5,
-                )
-
-            )
-        );
-
-        return $dataProvider;
-    }
-
 
     public function search()
     {

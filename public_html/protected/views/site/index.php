@@ -97,7 +97,7 @@
 			</div>
 			<?php endforeach; ?>
 			<div class = "other_users">
-			<a href="<?php echo $this->createUrl('client/index'); ?>">Показать остальных пользователей</a>
+			<a href="<?php echo $this->createUrl('user/index'); ?>">Показать остальных пользователей</a>
 		</div>
 	</div>
 </div>
