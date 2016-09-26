@@ -73,26 +73,31 @@
 			<!-- Testimonial -->
 			<div class="testimonial col-md-4 col-sm-6">
 				<!-- Author Photo -->
+				<div class="author-photo">
+					<?php echo CHtml::image($user->img); ?> <br>
+				</div>
 
 				<div class="testimonial-bubble">
 
 
 					<blockquote>
+						<p class="quote">
+							<?php echo($user->text);?> <br>
 
-						<?php
-						echo CHtml::image($user->img);
+						</p>
 
-							echo($user->director);
-							echo( $user->name);
+						<cite class="author-info">
+							- <?php echo($user->name); echo " "; echo($user->surname); ?> , <br><?php echo($user->company);?> at <a href="#"><?php echo( $user->name);?></a>
 
-						 ?>
-					
+						</cite>
 					</blockquote>
 
 					<div class="sprite arrow-speech-bubble"></div>
 				</div>
 			</div>
 			<?php endforeach; ?>
+			<div class = "other_users">
+			<a href="<?php echo $this->createUrl('client/index'); ?>">Показать остальных пользователей</a>
 		</div>
 	</div>
 </div>
