@@ -2672,3 +2672,8 @@ span.color-red {
 {
   text-align: center;
 }
+
+.author-photo img
+{
+  width: 100%;
+}
