@@ -31,7 +31,7 @@ class Users extends CActiveRecord
             array(
                 'criteria' =>$criteria,
                 'pagination' => array(
-                    'pageSize'=> 5,
+                    'pageSize'=> 6,
                 )
 
             )
