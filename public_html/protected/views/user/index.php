@@ -14,16 +14,16 @@
 	<div class="container">
 		<div class="row">
 						<!-- End Team Member -->
-			<div class="col-md-4 col-sm-6">
-				<div class="team-member">
+
+
 					<?php
 					$this->widget('zii.widgets.CListView', array(
 						'dataProvider' => $dataProvider,
 						'itemView'=>'_user',   // refers to the partial view named '_post'
 					));
 					?>
-				</div>
-			</div>
+
+			
 
 
 

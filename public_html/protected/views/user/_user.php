@@ -1,3 +1,4 @@
+<div class="col-md-4 col-sm-6">
 <div class="team-member">
     <!-- Team Member Photo -->
 
@@ -27,4 +28,5 @@
                 echo $data->company; ?></li>
         </ul>
     </div>
+</div>
 </div>
