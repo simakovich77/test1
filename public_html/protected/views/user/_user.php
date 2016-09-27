@@ -2,12 +2,16 @@
 <div class="team-member">
     <!-- Team Member Photo -->
 
-    <div class="team-member-image"><img src="<?php
+    <div class="team-member-image">
+        <a href="/index.php/user/userprofile">
+        <img src="<?php
 
         echo $data->img; ?>"
                                         alt="<?php
 
-                                        echo $data->name; ?>"></div>
+                                        echo $data->name; ?>">
+        </a>
+    </div>
 
     <div class="team-member-info">
         <ul>

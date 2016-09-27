@@ -10,6 +10,13 @@ class UserController extends Controller
         $this->render('index', $data);
     }
 
+    public function actionUserprofile($id)
+    {
+        $uSER = users::model()->findByPk($id);
+
+        $this->render('userprodile', $uSER);
+    }
+
 
 
 }
