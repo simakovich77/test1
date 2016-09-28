@@ -53,7 +53,7 @@ class Slider extends CActiveRecord
             'id' => 'ID',
             'title' => 'Title',
             'subtitle' => 'Subtitle',
-            'side-img' => 'Side-img',
+            'slide-img' => 'Slide_img',
             'text' => 'Text',
             'active' => 'Active',
             'company' => 'Company',
@@ -71,7 +71,7 @@ class Slider extends CActiveRecord
         $criteria->compare('id',$this->id);
         $criteria->compare('title',$this->title,true);
         $criteria->compare('subtitle',$this->subtitle,true);
-        $criteria->compare('side-img',$this->side-img,true);
+        $criteria->compare('slide-img',$this->slide-img,true);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,

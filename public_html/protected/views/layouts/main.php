@@ -25,12 +25,10 @@
 <body>
 
 <?php
-$this->beginWidget('extensions/widgets/SliderBase',array(
-	'params'=>array(
-		//получаем текущее действие чтобы подсветить активный элемент меню
 
-	)));
+$this->beginWidget('ext.widgets.SliderBase');
 $this->endWidget();
+
 ?>
 
 
