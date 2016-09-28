@@ -48,7 +48,7 @@ return array(
 				'clients' => 'client/index',
 				'client/<id:\d+>' => 'client/view',
 				'user' => 'user/index',
-				'user/<id:\d+>' => 'user/userprofile',
+				'users/<id:\d+>' => 'user/userprofile',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
