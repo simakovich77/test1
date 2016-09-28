@@ -12,9 +12,13 @@ class UserController extends Controller
 
     public function actionUserprofile($id)
     {
-        $uSER = users::model()->findByPk($id);
+        $uSER = Users::model()->findByPk($id);
+        $dAT = [
+            'userprof'=>$uSER,
 
-        $this->render('userprodile', $uSER);
+        ];
+
+        $this->render('userprofile', $dAT);
     }
 
 

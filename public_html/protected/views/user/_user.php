@@ -1,9 +1,8 @@
 <div class="col-md-4 col-sm-6">
 <div class="team-member">
     <!-- Team Member Photo -->
-
     <div class="team-member-image">
-        <a href="/index.php/user/userprofile">
+        <a href="<?php echo $this->createUrl('user/userprofile', ['id' => $data->id]); ?>">
         <img src="<?php
 
         echo $data->img; ?>"
