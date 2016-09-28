@@ -74,7 +74,7 @@
 			<div class="testimonial col-md-4 col-sm-6">
 				<!-- Author Photo -->
 				<div class="author-photo">
-					<?php echo CHtml::image($user->img); ?> <br>
+					<a href=<?php echo $this->createUrl('user/userprofile', ['id' => $user->id]); ?>><?php echo CHtml::image($user->img); ?> </a>
 				</div>
 
 				<div class="testimonial-bubble">
