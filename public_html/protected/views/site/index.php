@@ -1,3 +1,13 @@
+<?php
+$this->beginWidget('extensions/widgets/SliderBase',array(
+	'params'=>array(
+		//получаем текущее действие чтобы подсветить активный элемент меню
+
+	)));
+$this->endWidget();
+?>
+
+
 
 <!-- Press Coverage -->
 <div class="section">

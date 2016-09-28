@@ -1,6 +1,6 @@
 <?php
 /* рассмотрим здесь "параметризированный" виджет*/
-class AdminMenuWidget extends CWidget {
+class SliderBase extends CWidget {
 
     /*в общем случаем может
     хранить целый массив свойст - нас же интересует
@@ -16,6 +16,7 @@ class AdminMenuWidget extends CWidget {
 
     public function run() {
         // передаем данные в представление виджета
-        $this->render('adminmenu',array('params' => $this->params));
+        //$this->render('views/index',array('params' => $this->params));
+                echo 123;
     }
 }
