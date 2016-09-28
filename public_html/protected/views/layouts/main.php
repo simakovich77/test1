@@ -23,6 +23,17 @@
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
+
+<?php
+$this->beginWidget('extensions/widgets/SliderBase',array(
+	'params'=>array(
+		//получаем текущее действие чтобы подсветить активный элемент меню
+
+	)));
+$this->endWidget();
+?>
+
+
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
