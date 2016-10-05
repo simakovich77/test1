@@ -55,9 +55,9 @@
 		</div>
 		<nav id="mainmenu" class="mainmenu">
 			<ul>
-				<li class="logo-wrapper"><a href="index.php"><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
+				<li class="logo-wrapper"><a href=<?php echo Yii::app()->homeUrl; ?>><img src=<?php echo Yii::app()->request->baseUrl; ?>"/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></a></li>
 				<li class="active">
-					<a href=<?php echo Yii::app()->request->baseUrl; ?>"index.php">Home</a>
+					<a href=<?php echo Yii::app()->homeUrl; ?>>Home</a>
 				</li>
 				<li>
 					<a href="features.html">Features</a>
@@ -142,28 +142,7 @@
 	</div>
 </div>
 
-<!-- Homepage Slider -->
-<div class="homepage-slider">
-	<div id="sequence">
-		<ul class="sequence-canvas">
-			<?php
-
-			$this->beginWidget('ext.widgets.SliderBase');
-			$this->endWidget();
-
-			?>
-		</ul>
 	
-		<div class="sequence-pagination-wrapper">
-			<ul class="sequence-pagination">
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-			</ul>
-		</div>
-	</div>
-</div>
-<!-- End Homepage Slider -->
 
 <?php echo $content; ?>
 

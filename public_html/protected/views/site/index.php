@@ -1,3 +1,25 @@
+<!-- Homepage Slider -->
+<div class="homepage-slider">
+	<div id="sequence">
+		<ul class="sequence-canvas">
+			<?php
+
+			$this->beginWidget('ext.widgets.SliderBase');
+			$this->endWidget();
+
+			?>
+		</ul>
+
+		<div class="sequence-pagination-wrapper">
+			<ul class="sequence-pagination">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- End Homepage Slider -->
 
 <!-- Press Coverage -->
 <div class="section">
