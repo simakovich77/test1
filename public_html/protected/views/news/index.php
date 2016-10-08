@@ -17,9 +17,9 @@
                 <h2>Featured News</h2>
                 <?php foreach ($NewsData as $index => $News) : ?>
                 <div class="row">
-                    <div class="col-xs-4"><a href=<?php echo $this->createUrl('news/index');?>><img src=<?php echo $News->img; ?> alt="Post Title"></a></div>
+                    <div class="col-xs-4"><a href=<?php echo $this->createUrl('news/news');?>><img src=<?php echo $News->img; ?> alt="Post Title"></a></div>
                     <div class="col-xs-8">
-                        <div class="caption"><a href=<?php echo $this->createUrl('news/index');?>><?php echo $News->title; ?></a></div>
+                        <div class="caption"><a href=<?php echo $this->createUrl('news/news', ['id' => $News->id]); ?>><?php echo $News->title; ?></a></div>
                         <div class="date"><?php echo $News->ndate; ?> </div>
                         <div class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. <a href="page-blog-post-right-sidebar.html">Read more...</a></div>
                     </div>

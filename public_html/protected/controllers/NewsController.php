@@ -14,6 +14,17 @@ class NewsController extends Controller
         
     }
 
+    public function actionNews($id)
+    {
+        $Data = News::model()->findByPk($id);
+        $dAT = [
+            'NewsData'=>$Data,
+
+        ];
+
+        $this->render('news', $dAT);
+
+    }
 
 
 
