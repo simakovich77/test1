@@ -11,7 +11,7 @@ class NewsController extends Controller
         ];
 
         $this->render('index', $dAT);
-        
+
     }
 
     public function actionNews($id)
@@ -25,7 +25,6 @@ class NewsController extends Controller
         $this->render('news', $dAT);
 
     }
-
 
 
 
