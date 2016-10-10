@@ -49,7 +49,7 @@
 							</ul>
 						</div>
 					</li>
-					<li><a href="page-login.html">Login</a></li>
+					<li><a href=<?php echo Yii::app()->request->baseUrl; echo $this->createUrl('site/login');?>>Login</a></li>
 				</ul>
 			</div>
 		</div>
@@ -104,7 +104,7 @@
 									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"page-events.html">Events</a></li>
 									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"page-404.html">404 Page</a></li>
 									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"page-sitemap.html">Sitemap</a></li>
-									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"page-login.html">Login</a></li>
+									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"/site/login/">Login</a></li>
 									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"page-register.html">Register</a></li>
 									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"page-password-reset.html">Password Reset</a></li>
 									<li><a href=<?php echo Yii::app()->request->baseUrl; ?>"page-terms-privacy.html">Terms & Privacy</a></li>
