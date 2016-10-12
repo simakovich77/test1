@@ -11,11 +11,14 @@ class DefaultController extends Controller
 
 	public function actionArticles()
 	{
-		$Data = News::model()->findAll();
-		$dAT = [
-			'NewsList'=>$Data,
 
-		];
-		$this->render('articles', $dAT);
+
+
+
+		$dataProvider = News::model()->getNewsProvider();
+
+		$data = ['dataProvider' => $dataProvider];
+		$this->render('articles', $data);
+
 	}
 }

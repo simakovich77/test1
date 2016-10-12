@@ -23,11 +23,11 @@ class News extends CActiveRecord
         );
     }
 
-    public function getUserProvider()
+    public function getNewsProvider()
     {
         $criteria = new CDbCriteria;
         $criteria->order = 'name ASC';
-        $dataProvider = new CActiveDataProvider('Slider',
+        $dataProvider = new CActiveDataProvider('News',
             array(
                 'criteria' =>$criteria,
                 'pagination' => array(
@@ -68,8 +68,9 @@ class News extends CActiveRecord
 
         $criteria->compare('id',$this->id);
         $criteria->compare('title',$this->title,true);
-        $criteria->compare('subtitle',$this->subtitle,true);
-        $criteria->compare('slide-img',$this->slide-img,true);
+        $criteria->compare('subtitle',$this->img,true);
+        $criteria->compare('slide-img',$this->text,true);
+        $criteria->compare('slide-img',$this->tndate,true);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,
