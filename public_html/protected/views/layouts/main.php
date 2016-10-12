@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/icomoon-social.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/leaflet.css" />
+	<link rel="stylesheet" href=<?php echo Yii::app()->request->baseUrl; ?>""/css/leaflet.css" />
 	<!--[if lte IE 8]>
 	<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/leaflet.ie.css" />
 	<![endif]-->

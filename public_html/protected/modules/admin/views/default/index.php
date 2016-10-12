@@ -1,17 +1,25 @@
-<?php
-/* @var $this DefaultController */
 
-$this->breadcrumbs=array(
-	$this->module->id,
-);
-?>
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
+<nav id="mainmenu" class="mainmenu">
+	<ul>
 
-<p>
-This is the view content for action "<?php echo $this->action->id; ?>".
-The action belongs to the controller "<?php echo get_class($this); ?>"
-in the "<?php echo $this->module->id; ?>" module.
-</p>
-<p>
-You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p>
+		<li class="active">
+			<a href=<?php echo Yii::app()->request->baseUrl; echo $this->createUrl('/admin/default/articles'); ?>>Статьи</a>
+		</li>
+		<li>
+			<a href="features.html">Features</a>
+		</li>
+		<li class="has-submenu">
+			<a href="#">Pages +</a>
+		<li>
+			<a href="credits.html">Credits</a>
+		</li>
+	</ul>
+</nav>
+
+
+
+
+
+
+
+
