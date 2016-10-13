@@ -1,3 +1,7 @@
+<div class="container">
+
+
+    
 <!-- Page Title -->
 <div class="section section-breadcrumbs">
     <div class="container">
@@ -9,5 +13,16 @@
     </div>
 </div>
 
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'dataProvider'=>$dataProvider,
+    'itemsCssClass'=>'table-bordered',
+));
+
+?>
+
+
+
+    </div>
 
 

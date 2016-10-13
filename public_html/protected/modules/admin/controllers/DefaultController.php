@@ -11,10 +11,6 @@ class DefaultController extends Controller
 
 	public function actionArticles()
 	{
-
-
-
-
 		$dataProvider = News::model()->getNewsProvider();
 
 		$data = ['dataProvider' => $dataProvider];

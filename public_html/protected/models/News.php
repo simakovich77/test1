@@ -26,7 +26,6 @@ class News extends CActiveRecord
     public function getNewsProvider()
     {
         $criteria = new CDbCriteria;
-        $criteria->order = 'name ASC';
         $dataProvider = new CActiveDataProvider('News',
             array(
                 'criteria' =>$criteria,
