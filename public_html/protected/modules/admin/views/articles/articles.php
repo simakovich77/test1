@@ -1,3 +1,5 @@
+
+
 <div class="container">
 
 
@@ -13,6 +15,8 @@
     </div>
 </div>
 
+    <div class="tab1">
+        <p>
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$dataProvider,
@@ -31,7 +35,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
 ));
 
 ?>
-
+        </p>
+    </div>
 
 
     </div>
