@@ -16,7 +16,7 @@
     <ul>
 
         <li class="active">
-            <a href=<?php echo Yii::app()->request->baseUrl; echo $this->createUrl('/admin/default/articles'); ?>>Статьи</a>
+            <a href=<?php echo Yii::app()->request->baseUrl; echo $this->createUrl('/admin/articles/articles'); ?>>Статьи</a>
         </li>
         <li>
             <a href="features.html">Features</a>
