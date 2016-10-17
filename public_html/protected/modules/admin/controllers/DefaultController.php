@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController extends Controller
+class DefaultController extends AdminController
 {
 	public function actionIndex()
 	{
@@ -18,17 +18,20 @@ class DefaultController extends Controller
 
 	}
 
-    public function actionUpdate()
+    public function actionUpdate($id)
     {
 
 echo "dfg";
-        $this->render('update');
+        $data= News::model()->findAllByPk($id);
+
+
+        $this->render('update',['data'=>$data]);
     }
 
-    public function actionView()
+    public function actionView($id)
     {
+        $data =News::model()->findAllByPk($id);
 
-        echo "dfg1";
-        $this->render('view');
+        $this->render('view',$data);
     }
 }
