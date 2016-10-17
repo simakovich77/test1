@@ -17,6 +17,17 @@
 $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$dataProvider,
     'itemsCssClass'=>'table-bordered',
+    'columns'=>array(
+        'id::ID',
+        'title::Title',
+        'img::Img',
+        'text::Text',
+        'ndate::Ndate',
+        array(
+            'class' => 'CButtonColumn',
+        ),
+
+    ),
 ));
 
 ?>
