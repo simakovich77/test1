@@ -9,31 +9,48 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 
+
 </head>
 <body>
-<div class="col-md-4">.col-md-4
+<!--header_______________________________________________________________________________________________________-->
+<header class="header">
+    <div class="page-header">
+        <h1><?php echo CHtml::encode(Yii::app()->name); ?></h1>
+    </div>
+</header>
+<!--end header___________________________________________________________________________________________________-->
 
-    <ul>
+<!--menu_________________________________________________________________________________________________________-->
+<div class="col-md-3">
 
-        <li class="active">
-            <a href=<?php echo Yii::app()->request->baseUrl; echo $this->createUrl('/admin/articles/articles'); ?>>Статьи</a>
-        </li>
-        <li>
-            <a href="features.html">Features</a>
-        </li>
-        <li class="has-submenu">
-            <a href="#">Pages +</a>
-        <li>
-            <a href="credits.html">Credits</a>
-        </li>
+
+    <ul class="nav nav-pills nav-stacked">
+        <li role="presentation"><a href=<?php echo Yii::app()->request->baseUrl; echo $this->createUrl('/admin/articles/articles'); ?>>Статьи</a></li>
+        <li role="presentation"><a href="#">Features</a></li>
+        <li role="presentation"><a href="#">Pages</a></li>
     </ul>
+
 </div>
-<div class="col-md-8">.col-md-8
+<!--end menu______________________________________________________________________________________________________-->
+
+<!--content_______________________________________________________________________________________________________-->
+<div class="col-md-9">
     <?php echo $content;?>
 </div>
-
+<!--end content____________________________________________________________________________________________________-->
 
 </div>
 
+
+<!--footer_______________________________________________________________________________________________________-->
+
+<footer>
+    <div class="col-lg-12 top2 bottom2">
+        <div class="text-center">CopyRight &copy; <?php echo date('Y'); ?></div>
+    </div>
+</footer>
+
+
+<!--end footer___________________________________________________________________________________________________-->
 </body>
 </html>
