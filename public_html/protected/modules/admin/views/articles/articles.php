@@ -24,7 +24,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'columns'=>array(
         'id::ID',
         'title::Title',
-        'img::Img',
         array(
             'name' => 'img',
             'type' => 'image'),
