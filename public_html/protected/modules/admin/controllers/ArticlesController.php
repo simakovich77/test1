@@ -21,11 +21,10 @@ class ArticlesController extends AdminController
     public function actionUpdate($id)
     {
 
-        echo "dfg";
-        $data= News::model()->findAllByPk($id);
+        $data =News::model()->findAllByPk($id);
 
-
-        $this->render('update',['data'=>$data]);
+        $dat = ['d' => $data];
+        $this->render('update',$dat);
     }
 
     public function actionView($id)
