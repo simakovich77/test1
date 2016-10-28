@@ -32,6 +32,7 @@ class ArticlesController extends AdminController
     {
         $data =News::model()->findAllByPk($id);
 
-        $this->render('view',$data);
+        $dat = ['d' => $data];
+        $this->render('view',$dat);
     }
 }
