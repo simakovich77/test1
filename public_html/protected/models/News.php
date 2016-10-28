@@ -15,7 +15,7 @@ class News extends CActiveRecord
         return array(
 
 
-            array('title, img, text', 'max'=>255),
+            array('title, img, text', 'length', 'max'=>255),
             array('description', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.

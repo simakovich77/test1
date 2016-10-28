@@ -24,13 +24,10 @@ class ArticlesController extends AdminController
 
         $data =News::model()->findByPk($id);
 
-        if(isset($_POST['Articles'])) {
+        if(isset($_POST['News'])) {
 
-            echo 111;
-
-
-            $data->attributes=$_POST['Articles'];
-            $data->save(false);
+            $data->attributes=$_POST['News'];
+            $data->save();
 
         }
 

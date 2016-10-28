@@ -1,18 +1,22 @@
 
 
-<?php $form = $this->beginWidget('CActiveForm', array(
+<?php
+    /** @var News $d */
+    /** @var CActiveForm $form */
+    $form = $this->beginWidget('CActiveForm', array(
 'id'=>'user-form',
-'focus'=>array($d,'firstName'),
 )); ?>
 
 
 
-<div class="row">
-
-    <?php echo $form->labelEx($d,'title'); ?>
-    <?php echo $form->textField($d,'title',array('size'=>60,'maxlength'=>255)); ?>
+<div class="form-group">
+    <?php echo $form->labelEx($d, 'title'); ?>
+    <?php echo $form->textField($d,'title',array('size'=>60,'maxlength'=>255, 'class' => 'form-control')); ?>
     <?php echo $form->error($d,'title'); ?>
+</div>
 
+<div class="form-group">
+    <?php echo CHtml::submitButton($d->isNewRecord ? 'Create' : 'Save', ['class' => 'btn btn-default']); ?>
 </div>
 
 
