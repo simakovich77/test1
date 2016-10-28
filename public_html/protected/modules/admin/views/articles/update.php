@@ -1,25 +1,19 @@
-<textarea cols="150" rows ="30">
- <?php foreach ($d as $index => $dat) :
-
-     echo $dat->text;
-
- endforeach;
 
 
- ?>
+<?php $form = $this->beginWidget('CActiveForm', array(
+'id'=>'user-form',
+'focus'=>array($d,'firstName'),
+)); ?>
 
 
 
-</textarea>
+<div class="row">
 
-<script language="PHP">
+    <?php echo $form->labelEx($d,'title'); ?>
+    <?php echo $form->textField($d,'title',array('size'=>60,'maxlength'=>255)); ?>
+    <?php echo $form->error($d,'title'); ?>
 
-function  but1()
-{
-    echo "111111";
-    return $retval;
-}
+</div>
 
-</script>
 
-<p><input type="button" value="Проверить" onclick="but1()";"></p>
+<?php $this->endWidget(); ?>

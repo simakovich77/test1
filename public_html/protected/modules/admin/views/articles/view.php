@@ -1,14 +1,13 @@
 
-<textarea cols="150" rows ="30" readonly disabled>
- <?php foreach ($d as $index => $dat) :
+    <?php echo CHtml::beginForm(); ?>
+    <?php echo CHtml::errorSummary($model); ?>
+    <?php foreach ($d as $index => $dat) :
 
-     echo $dat->text;
+        echo CHtml::activeTextField($model, $dat->text);
 
- endforeach;
-
-
- ?>
+    endforeach;
 
 
+    ?>
 
-</textarea>
+<?php echo CHtml::endForm(); ?>

@@ -21,7 +21,18 @@ class ArticlesController extends AdminController
     public function actionUpdate($id)
     {
 
-        $data =News::model()->findAllByPk($id);
+
+        $data =News::model()->findByPk($id);
+
+        if(isset($_POST['Articles'])) {
+
+            echo 111;
+
+
+            $data->attributes=$_POST['Articles'];
+            $data->save(false);
+
+        }
 
         $dat = ['d' => $data];
         $this->render('update',$dat);
