@@ -23,6 +23,8 @@ class News extends CActiveRecord
         );
     }
 
+
+
     public function getNewsProvider()
     {
         $criteria = new CDbCriteria;
@@ -80,5 +82,18 @@ class News extends CActiveRecord
     public static function model($className=__CLASS__)
     {
         return parent::model($className);
+    }
+}
+
+class Item extends CActiveRecord
+{
+    public $image;
+    // ... other attributes
+
+    public function rules()
+    {
+        return array(
+            array('image', 'file', 'types'=>'jpg, gif, png', 'safe' => false),
+        );
     }
 }

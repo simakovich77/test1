@@ -24,10 +24,19 @@ class ArticlesController extends AdminController
 
         $data =News::model()->findByPk($id);
 
+
+
         if(isset($_POST['News'])) {
 
             $data->attributes=$_POST['News'];
+
             $data->save();
+            $data->img=CUploadedFile::getInstance($data,'img');
+            if($data->save())
+            {
+                $data->img->saveAs('path/to/localFile');
+                // redirect to success page
+            }
 
         }
 
