@@ -17,6 +17,9 @@
     <?php echo $form->textField($d,'text',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
     <?php echo $form->labelEx($d, 'Фото статьи'); ?>
     <?php echo $form->textField($d,'img',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
+    <?php echo $form->labelEx($d, 'Дата публикации'); ?>
+    <?php echo $form->textField($d,'ndate',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
+
 
 </div>
 
