@@ -40,6 +40,6 @@ class ArticlesController extends AdminController
         $data =News::model()->findAllByPk($id);
 
         $dat = ['d' => $data];
-        $this->render('view',$dat);
+        $this->render('update',$dat);
     }
 }
