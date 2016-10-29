@@ -16,7 +16,9 @@
     <?php echo $form->labelEx($d, 'Содержимое статьи'); ?>
     <?php echo $form->textField($d,'text',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
     <?php echo $form->labelEx($d, 'Фото статьи'); ?>
-    <?php echo $form->textField($d,'img',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
+    <?php echo CHtml::image(Yii::app()->request->baseUrl.$d->img,"img",array("width"=>200)); echo "<br>";?>
+    <?php echo $form->labelEx($d, 'Выбрать фото статьи'); ?>
+    <?php echo CHtml::activeFileField($d, 'image'); ?>
     <?php echo $form->labelEx($d, 'Дата публикации'); ?>
     <?php echo $form->textField($d,'ndate',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
 
