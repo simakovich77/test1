@@ -15,6 +15,9 @@
     <?php echo $form->error($d,'title'); ?>
     <?php echo $form->labelEx($d, 'Содержимое статьи'); ?>
     <?php echo $form->textField($d,'text',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
+    <?php echo $form->labelEx($d, 'Фото статьи'); ?>
+    <?php echo $form->textField($d,'img',array('size'=>255, 'maxlength'=>255, 'class' => 'form-control')); ?>
+
 </div>
 
 <div class="form-group">
