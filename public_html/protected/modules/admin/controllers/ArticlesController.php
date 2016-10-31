@@ -29,15 +29,15 @@ class ArticlesController extends AdminController
         if(isset($_POST['News'])) {
 
             $data->attributes=$_POST['News'];
-
-            $data->save();
             $data->img=CUploadedFile::getInstance($data,'img');
-            if($data->save())
-            {
-                $data->img->saveAs('path/to/localFile');
-                // redirect to success page
-            }
+            $path = 'img'.DIRECTORY_SEPARATOR.'upload'.
+                DIRECTORY_SEPARATOR.$data->img->getName();
 
+            if ($data->validate()) {
+                $data->img->saveAs( Yii::getPathOfAlias('webroot').DIRECTORY_SEPARATOR.$path);
+                $data->img = DIRECTORY_SEPARATOR.Yii::app()->baseUrl.$path;
+                $data->save();
+            }
         }
 
         $dat = ['d' => $data];
